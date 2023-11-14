@@ -3,7 +3,7 @@
 /**
  * prompt - Display a prompt and read user input in a loop
  */
-void prompt(void)
+void input_prompt(void)
 {
 	for (;;)
 	{
@@ -16,9 +16,9 @@ void prompt(void)
 		lenbuf = getline(&text, &bufsize, stdin);
 		if (lenbuf == -1)
 			exit(98);
-		if (compareExit(text, "exit") == 0)
+		if (compareChar(text, "exit") == 0)
 			exit(0);
-		if (compareEnv(text, "env") == 0)
+		if (compare_str(text, "env") == 0)
 		{
 			char **environ_copy = environ;
 			while (*environ_copy != NULL)

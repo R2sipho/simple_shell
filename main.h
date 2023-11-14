@@ -15,7 +15,7 @@
 extern char **environ;
 
 char *show_input(void);
-void prompt(void);
+void input_prompt(void);
 char *_strcat(char *src);
 int _strlen(char *str);
 void place(char *str);
@@ -26,12 +26,12 @@ int _strcmpdir(char *s1, char *s2);
 int charput(char c);
 void place(char *str);
 char *str_concat(char *s1, char *s2);
-int lookforslash(char *cmd);
-int compareExit(char *s1, char *s2);
-int compareEnv(char *s1, char *s2);
-void execute_proc(char **cmd);
+int cherck_slash_sign(char *cmd);
+int compareChar(char *s1, char *s2);
+int compare_str(char *s1, char *s2);
+void luanch_pro(char **cmd);
 char **identify_string(char *parameter);
-void controlC(int sig);
+void control_signal(int sig);
 
 
 #endif /* _MAIN_H_ */

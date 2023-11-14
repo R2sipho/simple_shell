@@ -11,7 +11,7 @@ int main(int ac, char **av)
 	(void)av;
 	(void)ac;
 
-	signal(SIGINT, controlC);
-	prompt();
+	signal(SIGINT, control_signal);
+	input_prompt();
 	return (0);
 }

@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * lookforslash - Check if a command includes a '/'
+ * cherck_slash_sign - Check if a command includes a '/'
  * @cmd: The command to check
  * Return: 1 if '/' is found, 0 otherwise
  */
-int lookforslash(char *cmd)
+int cherck_slash_sign(char *cmd)
 {
 	int cont = 0;
 
@@ -23,12 +23,12 @@ int lookforslash(char *cmd)
 }
 
 /**
- * compareExit - Compare the first three characters of two strings
+ * compareChar - Compare the first three characters of two strings
  * @s1: First string
  * @s2: Second string
  * Return: The difference between the ASCII values of the differing characters
  */
-int compareExit(char *s1, char *s2)
+int compareChar(char *s1, char *s2)
 {
 	int i = 0;
 
@@ -44,12 +44,12 @@ int compareExit(char *s1, char *s2)
 }
 
 /**
- * compareEnv - Compare the first two characters of two strings
+ * compare_str - Compare the first two characters of two strings
  * @s1: First string
  * @s2: Second string
  * Return: The difference between the ASCII values of the differing characters
  */
-int compareEnv(char *s1, char *s2)
+int compare_str(char *s1, char *s2)
 {
 	int i = 0;
 
@@ -84,15 +84,15 @@ char **identify_string(char *parameter)
 		i++;
 		split = strtok(NULL, delim);
 	}
-	execute_proc(buf);
+	luanch_pro(buf);
 	return (buf);
 }
 
 /**
- * controlC - Handle the Ctrl+C signal
+ * control_signal - Handle the Ctrl+C signal
  * @sig: Signal number
  */
-void controlC(int sig)
+void control_signal(int sig)
 {
 	(void) sig;
 	write(1, "\n$ ", 3);

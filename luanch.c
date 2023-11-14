@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * execute_proc - Execute a process specified by the command array
+ * luanch_pro - Execute a process specified by the command array
  * @cmd: Array of command and arguments
  */
-void execute_proc(char **cmd)
+void luanch_pro(char **cmd)
 {
 	char *parametro = cmd[1];
 	char *s, *slash = "/";
